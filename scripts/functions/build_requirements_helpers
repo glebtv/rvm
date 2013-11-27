@@ -182,6 +182,16 @@ rvm_requiremnts_fail_on()
 # is_head_or_disable_binary $rvm_ruby_string
 is_head_or_disable_binary()
 {
+  case "$1" in
+    (*-head*)
+      true
+      ;;
+    (*)
+      if (( ${rvm_binary_flag:-0} == 1 || ${rvm_disable_binary_flag:-0} == 0 ))
+      then return 1
+      fi
+      ;;
+  esac
   true # for OSX
 }
 
