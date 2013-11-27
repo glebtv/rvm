@@ -293,7 +293,7 @@ __rvm_install_source()
 
 __rvm_install_ruby_try_remote()
 {
-  : rvm_disable_binary_flag:${rvm_disable_binary_flag:=0}: rvm_remote_flag:${rvm_remote_flag:=0}:
+  : rvm_disable_binary_flag:${rvm_disable_binary_flag:=1}: rvm_remote_flag:${rvm_remote_flag:=0}:
   if
     (( rvm_remote_flag > 0 )) || # remote flag wins!
     (( rvm_head_flag == 0 && rvm_disable_binary_flag == 0 )) # not a head and disabled binary
