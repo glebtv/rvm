@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DEFAULT_SOURCES=(github.com/wayneeseguin/rvm bitbucket.org/mpapis/rvm)
+DEFAULT_SOURCES=(github.com/glebtv/rvm)
 
 BASH_MIN_VERSION="3.2.25"
 if
